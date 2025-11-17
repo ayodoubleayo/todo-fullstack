@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Light & Dark mode class switching */
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
