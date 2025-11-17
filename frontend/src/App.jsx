@@ -183,12 +183,15 @@ export default function App() {
                 {loading ? (
                   <p>Loading...</p>
                 ) : (
+                  <div className="px-3 sm:px-0">
+
                   <TodoList
                     todos={todos}
                     onToggle={toggleTodo}
                     onDelete={deleteTodo}
                     onUpdate={updateTodo}
                   />
+                  </div>
                 )}
               </div>
             }

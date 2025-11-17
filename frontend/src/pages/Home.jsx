@@ -9,7 +9,7 @@ export default function Home() {
       dark:from-gray-800 dark:to-gray-900 transition-all duration-300">
 
       {/* Hero Title */}
-      <h1 className="text-5xl font-extrabold mb-4 
+      <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 
         bg-gradient-to-r from-blue-600 to-purple-600 
         text-transparent bg-clip-text">
         Welcome! 👋
@@ -26,11 +26,10 @@ export default function Home() {
         className="px-8 py-3 text-lg font-medium 
         bg-blue-600 text-white rounded-lg shadow-md 
         hover:bg-blue-700 hover:shadow-lg 
-        transition-all"
+        transition-all w-full sm:w-auto"
       >
         Go to Todos 🚀
       </Link>
     </div>
   );
 }
-                                                

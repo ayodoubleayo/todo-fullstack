@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 export default function TodoForm({ onAdd }) {
   const [title, setTitle] = useState('');
-  const [reminder, setReminder] = useState(''); // datetime-local value
+  const [reminder, setReminder] = useState('');
 
   const submit = (e) => {
     e.preventDefault();
@@ -20,25 +20,34 @@ export default function TodoForm({ onAdd }) {
 
   return (
     <form onSubmit={submit} className="flex flex-col gap-3 mb-4">
-      <div className="flex gap-2">
+
+      {/* Input + Button */}
+      <div className="flex flex-col sm:flex-row gap-2 w-full">
         <input
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="flex-1 p-2 border rounded text-black dark:text-white bg-white dark:bg-gray-700"
+          className="flex-1 p-2 border rounded text-black dark:text-white bg-white dark:bg-gray-700 w-full"
           placeholder="Add new todo..."
         />
 
-        <button className="px-4 py-2 bg-blue-600 text-white rounded">Add</button>
+        <button className="w-full sm:w-auto px-4 py-2 bg-blue-600 text-white rounded">
+          Add
+        </button>
       </div>
 
-      <div className="flex items-center gap-3">
-        <label className="text-sm text-gray-600 dark:text-gray-300">Reminder:</label>
+      {/* Reminder Row */}
+      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+        <label className="text-sm text-gray-600 dark:text-gray-300">
+          Reminder:
+        </label>
+
         <input
           type="datetime-local"
           value={reminder}
           onChange={(e) => setReminder(e.target.value)}
-          className="p-2 border rounded text-sm bg-white dark:bg-gray-700 dark:text-white"
+          className="p-2 border rounded text-sm bg-white dark:bg-gray-700 dark:text-white w-full sm:w-auto"
         />
+
         <button
           type="button"
           onClick={() => setReminder('')}
